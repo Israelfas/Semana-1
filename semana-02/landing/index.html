@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio</title>
+</head>
+    
+<body>
+
+
+    <form action="#" method="post" aria-label="Formulario de contacto"> 
+
+  <fieldset>
+    <legend>Datos personales</legend>
+
+    <p>
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="60" placeholder="Ej: Luis Mario">
+    </p>
+
+    <p>
+      <label for="correo">Inserte correo:</label>
+      <input type="email" id="correo" name="correo" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        placeholder="Ej: Example@hotmail.com">
+    </p>
+
+    <p>
+      <label for="numero_celular">Numero_celular</label>
+      <input type="num" id="numero_celular" name="numero_celular" required minlength="10" maxlength="10"
+        placeholder="Ej: 0999999999">
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Tu mensaje</legend>
+    <p>
+      <label for="asunto">Asunto:</label>
+      <select id="asunto" name="asunto" required>
+        <option value="">-- Selecciona una opción --</option>
+        <option value="colaboracion">Propuesta de colaboración</option>
+        <option value="trabajo">Oferta de trabajo</option>
+        <option value="consulta">Consulta general</option>
+        <option value="otro">Otro</option>
+      </select>
+    </p>
+    <p>
+      <label for="mensaje">Mensaje:</label>
+      <br><br>
+      <textarea id="mensaje" name="mensaje" rows="5" cols="40" required minlength="30"
+        placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+    <br><br>
+    <button type="submit">Enviar</button>
+
+    </p>
+  </fieldset>
+</form>
+
+</body>
+
+</html>
