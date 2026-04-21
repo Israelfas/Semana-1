@@ -14,7 +14,7 @@
 
       <p>
         <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="60" placeholder="Ej: Juan Pérez">
+        <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="60" placeholder="Ej: Luis Mario">
       </p>
 
       <p>
@@ -25,8 +25,8 @@
 
       <p>
         <label for="numero_celular">Numero_celular</label>
-        <input type="num" id="numero_celular" name="numero_celular" required minlength="10" maxlength="10"
-          placeholder="Ej: 0999999999">
+        <input type="tel" id="numero_celular" name="numero_celular" required pattern="[0-9]{10}"
+          title="Ingresa exactamente 10 dígitos sin espacios" placeholder="Ej: 0999999999">
       </p>
     </fieldset>
 
@@ -114,7 +114,7 @@
       <tfoot>
         <tr>
           <!-- colspan="4" = ocupa las 4 columnas -->
-          <td colspan="4">Última actualización: abril 2026 · Equipo: Nombre A, Nombre B, Nombre C</td>
+          <td colspan="4">Última actualización: abril 2026 · Equipo C</td>
         </tr>
       </tfoot>
     </table>
