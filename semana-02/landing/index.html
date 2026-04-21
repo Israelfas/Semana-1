@@ -4,59 +4,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio</title>
+  <title>Portafolio del Equipo — IS-403 ULEAM</title>
 </head>
-    
+
 <body>
+  <form action="#" method="post" aria-label="Formulario de contacto">
+    <fieldset>
+      <legend>Datos personales</legend>
 
+      <p>
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="60" placeholder="Ej: Juan Pérez">
+      </p>
 
-    <form action="#" method="post" aria-label="Formulario de contacto"> 
+      <p>
+        <label for="correo">Inserte correo:</label>
+        <input type="email" id="correo" name="correo" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          placeholder="Ej: Example@hotmail.com">
+      </p>
 
-  <fieldset>
-    <legend>Datos personales</legend>
+      <p>
+        <label for="numero_celular">Numero_celular</label>
+        <input type="num" id="numero_celular" name="numero_celular" required minlength="10" maxlength="10"
+          placeholder="Ej: 0999999999">
+      </p>
+    </fieldset>
 
-    <p>
-      <label for="nombre">Nombre completo:</label>
-      <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="60" placeholder="Ej: Luis Mario">
-    </p>
+    <fieldset>
+      <legend>Tu mensaje</legend>
+      <p>
+        <label for="asunto">Asunto:</label>
+        <select id="asunto" name="asunto" required>
+          <option value="">-- Selecciona una opción --</option>
+          <option value="colaboracion">Propuesta de colaboración</option>
+          <option value="trabajo">Oferta de trabajo</option>
+          <option value="consulta">Consulta general</option>
+          <option value="otro">Otro</option>
+        </select>
+      </p>
+      <p>
+        <label for="mensaje">Mensaje:</label>
+        <br>
+        <textarea id="mensaje" name="mensaje" rows="5" cols="40" required minlength="30"
+          placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
 
-    <p>
-      <label for="correo">Inserte correo:</label>
-      <input type="email" id="correo" name="correo" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-        placeholder="Ej: Example@hotmail.com">
-    </p>
+        <br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+      </p>
+    </fieldset>
+    <table>
+      <caption>Habilidades técnicas del equipo — Actualizado abril 2026</caption>
+      <br>
+      <thead>
+        <tr>
+          <th scope="col">Categoría</th>
+          <th scope="col">Tecnología</th>
+          <th scope="col">Nivel</th>
+          <th scope="col">Años</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" rowspan="3">Lenguajes</th>
+          <td>Html5</td>
+          <td>Intermedio</td>
+          <td>1 año</td>
+        </tr>
+        <tr>
+          <td>Css3</td>
+          <td>Avanzado</td>
+          <td>2 años</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td>Avanzado</td>
+          <td>2 años</td>
+        </tr>
+        <tr>
+          <th scope="row" rowspan="2">Herraminetas</th>
+          <td>Github</td>
+          <td>Avanzado</td>
+          <td>3 años</td>
+        </tr>
+        <tr>
+          <td>Figma</td>
+          <td>Avanzado</td>
+          <td>2 años</td>
+        </tr>
+        <tr>
+          <th scope="row" rowspan="2">Frameworks</th>
+          <td>Bootstrap</td>
+          <td>Básico</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Node.js</td>
+          <td>Básico</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th scope="row">Bases de datos</th>
+          <td>MySQL</td>
+          <td>Intermedio</td>
+          <td>1</td>
+        </tr>
 
-    <p>
-      <label for="numero_celular">Numero_celular</label>
-      <input type="num" id="numero_celular" name="numero_celular" required minlength="10" maxlength="10"
-        placeholder="Ej: 0999999999">
-    </p>
-  </fieldset>
+      </tbody>
 
-  <fieldset>
-    <legend>Tu mensaje</legend>
-    <p>
-      <label for="asunto">Asunto:</label>
-      <select id="asunto" name="asunto" required>
-        <option value="">-- Selecciona una opción --</option>
-        <option value="colaboracion">Propuesta de colaboración</option>
-        <option value="trabajo">Oferta de trabajo</option>
-        <option value="consulta">Consulta general</option>
-        <option value="otro">Otro</option>
-      </select>
-    </p>
-    <p>
-      <label for="mensaje">Mensaje:</label>
-      <br><br>
-      <textarea id="mensaje" name="mensaje" rows="5" cols="40" required minlength="30"
-        placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
-    <br><br>
-    <button type="submit">Enviar</button>
-    <button type="reset">Limpiar</button>
-    </p>
-  </fieldset>
-      
-</form>
+      <tfoot>
+        <tr>
+            <br>
+          <!-- colspan="4" = ocupa las 4 columnas -->
+          <td colspan="4">Última actualización: abril 2026 · Equipo: Nombre A, Nombre B, Nombre C</td>
+        </tr>
+      </tfoot>
+    </table>
+    <section id="sobre">
+  <h2>El equipo</h2>
+
+  <!-- IMAGEN INFORMATIVA: alt describe lo que muestra -->
+  <img
+    src="https://placehold.co/200x200?text=Israel"
+    alt="Foto de Nombre A, estudiante de Ingeniería en Software de ULEAM, con fondo gris."
+    width="200"
+    height="200">
+
+  <!-- IMAGEN INFORMATIVA: alt describe lo que muestra -->
+  <img
+    src="https://placehold.co/200x200?text=Alejo"
+    alt="Foto de Nombre B, integrante del equipo, sonriendo con fondo claro."
+    width="200"
+    height="200">
+
+  <!-- IMAGEN INFORMATIVA: alt describe lo que muestra -->
+  <img
+    src="https://placehold.co/200x200?text=LuisMa"
+    alt="Foto de Nombre C, desarrollador web, con camisa oscura y fondo neutro."
+    width="200"
+    height="200">
+
+  <!-- IMAGEN DECORATIVA: alt vacío (no omitido), el lector la ignora -->
+  <img
+    src="https://placehold.co/900x2/cccccc/cccccc"
+    alt=""
+    width="900"
+    height="2">
+
+</section>
+  </form>
 
 </body>
 
