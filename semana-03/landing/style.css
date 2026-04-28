@@ -40,22 +40,39 @@ body {
 }
 
 /* Navegación Flexbox */
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background: #1e2761;
+    background: rgba(30, 39, 97, 0.95);
+    backdrop-filter: blur(10px);
     color: white;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 10000;
+    box-shadow: var(--shadow-md);
 }
 
-nav a {
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
     color: white;
     text-decoration: none;
-    margin-left: 15px;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
 }
 
 /* Hero Section */
