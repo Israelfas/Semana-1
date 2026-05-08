@@ -5,46 +5,56 @@
 }
 
 :root {
-    --color-primary: #1e2761;
-    --color-secondary: #408ec6;
-    --color-accent: #63b3ed;
-    --color-bg: #eaf3fb;
-    --color-text: #1a2a4a;
-    --color-text-light: #5a7fa8;
+    --color-primary:     #1e2761;
+    --color-secondary:   #408ec6;
+    --color-acento:      #63b3ed;
+    --color-fondo-claro: #eaf3fb;
+    --color-texto:       #1a2a4a;
+    --color-text-light:  #5a7fa8;
 
-    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
     --spacing-lg: 2rem;
     --spacing-xl: 4rem;
 
-    --radius: 12px;
-    --shadow-sm: 0 2px 8px rgba(30, 39, 97, 0.08);
-    --shadow-md: 0 4px 16px rgba(30, 39, 97, 0.14);
-    --shadow-lg: 0 10px 30px rgba(30, 39, 97, 0.18);
+    --radius:     12px;
+    --shadow-sm:  0 2px 8px  rgba(30, 39, 97, 0.08);
+    --shadow-md:  0 4px 16px rgba(30, 39, 97, 0.14);
     --transition: all 0.3s ease;
 
-    
-    --grad-hero:     linear-gradient(135deg, #1e2761 0%, #2a5298 50%, #408ec6 100%);
-    --grad-nav:      linear-gradient(90deg,  #1e2761 0%, #2a5298 100%);
-    --grad-section:  linear-gradient(180deg, #ffffff 0%, #eaf3fb 100%);
-    --grad-alt:      linear-gradient(180deg, #eaf3fb 0%, #d6eaf8 100%);
-    --grad-card:     linear-gradient(145deg, #ffffff 0%, #eaf3fb 100%);
-    --grad-btn:      linear-gradient(135deg, #1e2761 0%, #408ec6 100%);
-    --grad-footer:   linear-gradient(135deg, #1e2761 0%, #2a5298 60%, #408ec6 100%);
-    --grad-th:       linear-gradient(90deg,  #d6eaf8 0%, #b3d4f0 100%);
-    --grad-fieldset: linear-gradient(160deg, #ffffff 0%, #eaf3fb 100%);
+    --grad-hero:    linear-gradient(135deg, #1e2761 0%, #2a5298 50%, #408ec6 100%);
+    --grad-nav:     linear-gradient(90deg,  #1e2761 0%, #2a5298 100%);
+    --grad-section: linear-gradient(180deg, #ffffff 0%, #eaf3fb 100%);
+    --grad-alt:     linear-gradient(180deg, #eaf3fb 0%, #d6eaf8 100%);
+    --grad-card:    linear-gradient(145deg, #ffffff 0%, #eaf3fb 100%);
 }
 
+/* =====================
+   TIPOGRAFÍA · Parte B
+   ===================== */
 body {
-    font-family: var(--font-body);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
     line-height: 1.6;
     margin: 0;
-    color: var(--color-text);
+    color: var(--color-texto);
     background: linear-gradient(180deg, #f0f8ff 0%, #ffffff 30%);
 }
 
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero__title {
+    font-weight: 800;
+}
+
+/* =====================
+   NAVEGACIÓN
+   ===================== */
 nav {
     display: flex;
     justify-content: space-between;
@@ -78,13 +88,16 @@ nav {
     color: #63b3ed;
 }
 
+/* =====================
+   HERO
+   ===================== */
 .hero {
     display: flex;
-    flex-direction: column;       
-    justify-content: center;      
-    align-items: center;          
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    min-height: 60vh;             
+    min-height: 60vh;
     padding: var(--spacing-xl) var(--spacing-lg);
     background: var(--grad-hero);
 }
@@ -107,14 +120,17 @@ nav {
 .hero p:last-child {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.8);
-    max-width: 600px;   
+    max-width: 600px;
     margin: 0;
 }
 
+/* =====================
+   SECCIONES
+   ===================== */
 .section {
     padding: var(--spacing-xl) var(--spacing-lg);
-    max-width: 960px;   
-    margin: 0 auto;     
+    max-width: 960px;
+    margin: 0 auto;
     background: var(--grad-section);
 }
 
@@ -143,74 +159,71 @@ nav {
     margin-bottom: var(--spacing-lg);
     padding-bottom: var(--spacing-sm);
     border-bottom: 3px solid var(--color-secondary);
-    display: inline-block;  
+    display: inline-block;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;     
-    margin-top: 20px;
-    background-color: white;
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
+/* =====================
+   HABILIDADES · Parte C
+   ===================== */
+.habilidades__lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
 }
 
-thead {
-    background-color: var(--color-primary);
-}
-
-thead th {
-    color: white;
-    padding: 12px var(--spacing-md);
-    text-align: left;
+.habilidades__lista li {
+    background-color: var(--color-fondo-claro);
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
     font-weight: 600;
 }
 
-tbody th {
-    background-color: #eef2f7;
-    padding: 10px var(--spacing-md);
-    text-align: left;
-    font-weight: 600;
-    color: var(--color-primary);
+.habilidades__lista li i {
+    color: var(--color-acento);
+    margin-right: 0.5rem;
 }
 
-tbody td {
-    padding: 10px var(--spacing-md);
-    border-bottom: 1px solid #e0e0e0;
-}
-
-tbody tr:hover td {
-    background-color: #f8f9fa;
-}
-
+/* =====================
+   GALERÍA · CSS Grid · Parte A
+   ===================== */
 .project-grid {
-    display: flex;                  
-    gap: var(--spacing-lg);         
-    flex-wrap: wrap;                
-    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200rem, 1fr));
+    gap: 1rem;
+    padding: 1rem;
 }
 
+@media (min-width: 900px) {
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* =====================
+   TARJETA DE PROYECTO
+   ===================== */
 .project-card {
-    flex: 1 1 220px;                
     background: var(--grad-card);
     border: 1px solid #b3d4f0;
-    border-top: 4px solid var(--color-secondary);  
+    border-top: 4px solid var(--color-secondary);
     border-radius: var(--radius);
-    overflow: hidden;               
-    transition: transform 0.2s, box-shadow 0.2s;   
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
     box-shadow: var(--shadow-sm);
 }
 
 .project-card:hover {
-    transform: translateY(-4px);                    
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);    
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .project-card img {
     width: 100%;
     height: 200px;
-    object-fit: cover;              
+    object-fit: cover;
     display: block;
 }
 
@@ -228,6 +241,9 @@ tbody tr:hover td {
     font-size: 0.92rem;
 }
 
+/* =====================
+   FORMULARIO DE CONTACTO
+   ===================== */
 fieldset {
     border: 1px solid #e0e0e0;
     border-radius: var(--radius);
@@ -240,18 +256,18 @@ fieldset {
 }
 
 legend {
-    font-size: 1.1rem;              
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--color-primary);
     padding: 0 var(--spacing-sm);
 }
 
 label {
-    display: block;                 
+    display: block;
     margin-bottom: 4px;
     font-weight: 500;
     font-size: 0.95rem;
-    color: var(--color-text);
+    color: var(--color-texto);
 }
 
 input,
@@ -260,19 +276,19 @@ textarea {
     width: 100%;
     padding: 10px 12px;
     font-size: 1rem;
-    font-family: var(--font-body);  
+    font-family: var(--font-body);
     border: 1px solid #e0e0e0;
     border-radius: var(--radius);
-    margin-bottom: var(--spacing-md); 
+    margin-bottom: var(--spacing-md);
     transition: border-color 0.2s;
-    color: var(--color-text);
+    color: var(--color-texto);
     background-color: white;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-    outline: 2px solid var(--color-secondary);  
+    outline: 2px solid var(--color-secondary);
     outline-offset: 2px;
     border-color: var(--color-secondary);
 }
@@ -283,7 +299,7 @@ button {
     font-weight: 600;
     border: none;
     border-radius: var(--radius);
-    cursor: pointer;                
+    cursor: pointer;
     transition: background-color 0.2s;
 }
 
@@ -294,7 +310,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #026d7a;      
+    background-color: #026d7a;
 }
 
 button[type="reset"] {
@@ -306,7 +322,28 @@ button[type="reset"] {
 
 button[type="reset"]:hover {
     background-color: #f4f4f4;
-    color: var(--color-text);
+    color: var(--color-texto);
+}
+
+/* =====================
+   FOOTER + REDES · Parte C
+   ===================== */
+.redes {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.redes a {
+    font-size: 1.5rem;
+    color: var(--color-texto);
+    transition: color 0.2s, transform 0.2s;
+}
+
+.redes a:hover {
+    color: var(--color-acento);
+    transform: translateY(-2px);
 }
 
 footer {
@@ -320,4 +357,4 @@ footer {
 footer p {
     margin: 4px 0;
     opacity: 0.85;
-}   
+}
